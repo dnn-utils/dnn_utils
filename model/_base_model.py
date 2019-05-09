@@ -7,8 +7,19 @@
 from __future__ import print_function
 
 from abc import ABC, abstractmethod
-print("ABC: {}".format(ABC))
 
-class BaseModel :
+class BaseModel(ABC) :
     def __init__(self) :
-        print("BaseModel initialization")
+        super().__init__()
+        self._model = None
+
+    @property
+    def model(self) :
+        return self._model
+    @model.setter
+    def model(self, model = None) :
+        self._model = model
+
+    @abstractmethod
+    def print_name(self) :
+        pass
