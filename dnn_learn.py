@@ -125,7 +125,7 @@ def preprocess(preprocessor) :
             training_size = preprocess_sample(preprocessor, sample, class_group, training_size)
 
     print("Storing preprocessed file: {}".format(os.path.abspath(output_filename)))
-
+    return output_filename
 
 def learn(actors = [], models = []) :
 
@@ -137,7 +137,7 @@ def learn(actors = [], models = []) :
         raise Exception("Invalid number of preprocessors (={})".format(len(preprocessors)))
 
     if preprocessors :
-        preprocess(preprocessors[0])
+        preprocessed_inputs = preprocess(preprocessors[0])
 
     
 
