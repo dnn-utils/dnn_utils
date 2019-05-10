@@ -17,5 +17,5 @@ class DefaultPreprocessor(BasePreprocessor) :
         # default is a pass through
         input_size = arr.size
         output_size = arr.size
-        print("DefaultPreprocessor::preprocess  Input size = {}, Output size = {}".format(input_size, output_size))
-        return arr
+        #print("DefaultPreprocessor::preprocess  Input size = {}, Output size = {}".format(input_size, output_size))
+        return arr[:]
