@@ -1,2 +1,2 @@
 #!/bin/bash
-export PYTHONPATH=${PWD}/..:${PYTHONPATH}
+export PYTHONPATH=${PWD}/:${PYTHONPATH}
